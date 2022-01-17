@@ -22,6 +22,7 @@ function handleButtonClick(event) {
   let color = event.target.dataset.color;
   event.target.classList.add(selectedClassName);
   chrome.storage.sync.set({ color });
+  changeColor.style.backgroundColor = color;
 }
 
 // Add a button to the page for each supplied color
